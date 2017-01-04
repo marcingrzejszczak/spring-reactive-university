@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<spring-cloud-bom.version>Brixton.BUILD-SNAPSHOT</spring-cloud-bom.version>
 	</properties>
 
 	<dependencies>
@@ -44,6 +45,14 @@
 		<dependency>
 			<groupId>org.webjars.bower</groupId>
 			<artifactId>jquery</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-reactor</artifactId>
 		</dependency>
 
 		<dependency>
@@ -84,6 +93,13 @@
 				<groupId>org.springframework.boot.experimental</groupId>
 				<artifactId>spring-boot-dependencies-web-reactive</artifactId>
 				<version>0.1.0.BUILD-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud-bom.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
